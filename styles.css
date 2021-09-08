@@ -1,0 +1,92 @@
+:root{
+  --clr-primary-200: #F3EED9;
+  --clr-primary-400: #824936;
+  --clr-neutral-900: #222c2A;
+  --clr-neutral-100: #FFF;
+  --ff-primary: 'Titillium Web', sans-serif;
+  --ff-accent: 'Optima', sans-serif;
+}
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.31rem;
+  line-height: 1.6;
+}
+h2,h1,h3{
+  font-family: var(--ff-accent);
+  font-weight: 400;
+  line-height: 1;
+  color:var(--clr-primary-400);
+
+}
+
+h2,h3,p{
+  margin-bottom: 1em;
+}
+
+header,
+section{
+  padding: 3rem 0;
+}
+img{
+  max-width: 100%;
+}
+
+/* class */
+
+.container{
+  margin: 0 auto;
+  width: 90%;
+  max-width: 70.5rem;
+}
+.bg-light1{
+  background-color: var(--clr-primary-200);
+}
+.bg-primary1{
+  background-color: var(--clr-primary-400);
+}
+.bg-dark1{
+  background-color: var(--clr-neutral-900);
+}
+
+
+.bg-primary1 h2,p,
+.bg-dark1 h2,p {
+  color: var(--clr-primary-200)
+}
+
+.sec1 p{
+  color: black;
+}
+
+.text-center{
+  text-align: center;
+}
+.split{
+  display:flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em){
+  .split{
+    flex-direction: row;
+  }
+  .split > * {
+    flex-basis: 100%; // force equal width when even col
+  }
+  .split > * + * { // any element with sibling before it
+    /* margin-left: 2em; */
+  }
+  .content {
+    margin-left: 1.3em;
+  }
+  .content1{
+    margin-left: 2em;
+  }
+}
